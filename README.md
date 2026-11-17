@@ -6,7 +6,7 @@ A practice project that automatically deploys a static website using Jenkins on 
 
 ## How it works
 1. Code is pushed to this GitHub repo.
-2. Jenkins (running on an Azure Ubuntu VM) pulls the latest code [on manual build / via webhook / by polling: pick one].
+2. Jenkins (running on an Azure Ubuntu VM) pulls the latest code by polling
 3. A build step copies `index.html` to the Nginx web root.
 4. Nginx serves the updated site.
 
@@ -22,7 +22,8 @@ Jenkins, Azure VM (Ubuntu, free tier), Nginx, GitHub, Linux
 6. Run the job and open the VM's public IP to see the site.
 
 ## What I learned
-- [One or two real points, e.g. fixing a permissions error, opening the Azure firewall port, or connecting Jenkins to GitHub]
+- Opened the Azure firewall port for Jenkins and fixed file permissions so the `jenkins` user could deploy to Nginx.
+- Connected Jenkins to GitHub to build and deploy the site on demand.
 
 ## Possible improvements
 - Move the job into a `Jenkinsfile` (pipeline as code)
