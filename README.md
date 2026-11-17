@@ -1,5 +1,3 @@
-# testjenkins
-
 # Jenkins CI/CD on Azure: Static Website Deployment
 
 A practice project that automatically deploys a static website using Jenkins on an Azure VM.
